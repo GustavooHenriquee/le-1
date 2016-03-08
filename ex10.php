@@ -1,0 +1,23 @@
+<?php
+print "Digite o valor do coeficiente 'a': ";
+$a = trim(fgets(STDIN));
+
+print "Digite o valor do coeficiente 'b': ";
+$b = trim(fgets(STDIN));
+
+print "Digite o valor do coeficiente 'c': ";
+$c = trim(fgets(STDIN));
+
+$delta = pow($b, 2) - 4*$a*$c;
+
+if ($delta < 0) {
+	print "\nEsta equação não possui raízes reais";
+}
+
+else {
+	$x¹ = (-$b + sqrt($delta)) / (2 * $a);
+	$x² = (-$b - sqrt($delta)) / (2 * $a);
+	print "\nRaizes da equação:";
+	print "\nX1 = " . $x¹;
+	print "\nX2 = " . $x²;
+}
